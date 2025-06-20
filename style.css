@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header - Top Bar */
+.top-bar {
+    background-color: #f8f9fa; /* Light grey, similar to original */
+    border-bottom: 1px solid #eee;
+    font-size: 0.85rem;
+}
+.top-bar .contact-info span {
+    margin-right: 15px;
+}
+.top-bar .social-icons a {
+    color: #666;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+.top-bar .social-icons a:hover {
+    color: #007bff; /* Primary blue */
+}
+
+/* Header - Navbar */
+/* Kita tambahkan class navbar-custom untuk penyesuaian khusus */
+.navbar-custom {
+    background-color: white !important; /* Pastikan latar belakang navbar putih */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-custom .container {
+    display: flex;
+    justify-content: space-between; /* Untuk mendorong logo ke kiri dan menu ke kanan */
+    align-items: center; /* Untuk menyelaraskan secara vertikal */
+    padding-top: 15px; /* Sesuaikan padding agar mirip dengan gambar */
+    padding-bottom: 15px; /* Sesuaikan padding agar mirip dengan gambar */
+}
+
+.navbar-brand img {
+    max-height: 50px;
+}
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: #333 !important; /* Override Bootstrap default */
+    padding: 0.5rem 1rem; /* Jarak antar menu */
+}
+
+/* Warna link aktif/hover disesuaikan dengan contoh gambar kedua (kuning) */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #e6b800 !important; /* Warna kuning dari contoh pertama */
+    /* Jika Anda ingin warna biru tetap, gunakan:
+    color: #007bff !important; */
+}
+
+
+/* Responsif untuk layar kecil (Tambahkan ini jika belum ada di style.css) */
+@media (max-width: 991.98px) { /* breakpoint Bootstrap 'lg' */
+    .navbar-custom .container {
+        flex-wrap: wrap; /* Izinkan item untuk membungkus */
+        justify-content: space-between; /* Logo kiri, toggler kanan */
+    }
+    .navbar-custom .navbar-collapse {
+        width: 100%; /* Menu akan mengisi lebar penuh di bawah logo */
+        order: 1; /* Pastikan menu muncul di bawah logo dan toggler */
+    }
+    .navbar-custom .navbar-nav {
+        flex-direction: column; /* Menu menjadi tumpukan vertikal */
+        width: 100%;
+        text-align: center; /* Teks menu di tengah */
+        padding-top: 10px; /* Jarak antara toggler dan menu */
+    }
+    .navbar-custom .navbar-nav .nav-item {
+        margin-bottom: 5px;
+    }
+}
+
+
+/* Hero Slider */
+#hero-slider .carousel-item img {
+    height: 500px; /* Adjust as needed */
+    object-fit: cover;
+}
+#hero-slider .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 20%; /* Adjust position */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 800px;
+}
+#hero-slider .carousel-caption h5 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+#hero-slider .carousel-caption p {
+    font-size: 1.2rem;
+}
+
+
+/* Map Section */
+#mapid {
+    height: 600px; /* Pastikan ini ada dan nilainya lebih besar dari 0 */
+    width: 100%;  /* Pastikan ini ada */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* News/Information Cards */
+#berita-informasi .card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+}
+#berita-informasi .card:hover {
+    transform: translateY(-5px);
+}
+#berita-informasi .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    background-color: #212529 !important; /* Darker than default Bootstrap dark */
+    color: #f8f9fa;
+}
+footer a {
+    color: #f8f9fa;
+}
+footer a:hover {
+    color: #007bff;
+}
+footer ul {
+    padding-left: 0;
+}
+footer ul li {
+    margin-bottom: 8px;
+}
